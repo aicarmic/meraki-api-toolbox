@@ -3,7 +3,7 @@
 var org_id = Cookies.get("org-id");
 var api_key = Cookies.get("api-key");
 
-var api_url = "http://localhost:3000/go/api/v0";
+var api_url = "http://api.meraki.com/api/v0";
 var req_headers = {'X-Cisco-Meraki-API-Key': api_key, 'ContentType': 'application/json'};
 
 var templates_url = api_url + "/organizations/" + org_id + "/configTemplates";
