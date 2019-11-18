@@ -35,7 +35,7 @@ var config = {
                     })
                 }
 
-                fetch('https://api.meraki.com/' + req.originalUrl,fetch_config).then((response) => {
+                fetch('https://api-mp.meraki.com' + req.originalUrl,fetch_config).then((response) => {
                     response.json().then((body) => {
                         res.status(response.status).json(body)
                     })                   
