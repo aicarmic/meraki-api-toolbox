@@ -1,8 +1,8 @@
-
-
 import React from 'react'
 import {render} from 'react-dom'
 import ReactDom from 'react-dom'
+import PasswordMask from 'react-password-mask';
+
 
 import {Grid, Row, Col, Panel, Button, ControlLabel, Form, FormGroup, FormControl} from 'react-bootstrap'
 
@@ -27,6 +27,8 @@ export default class Config extends React.Component{
         })
     }
 
+
+
     update_api_key(e) {
         this.setState({
             api_key: e.target.value,
@@ -36,15 +38,14 @@ export default class Config extends React.Component{
 
     api_key_textbox() {
         return (
-            <FormGroup controlId="api_key_text">
-                <ControlLabel>Api Key</ControlLabel>
-                <FormControl
-                    type="text"
-                    value={this.state.api_key}
-                    placeholder="Enter Api key"
-                    onChange={this.update_api_key}
+            <PasswordMask
+                id="API key"
+                name="API key"
+                placeholder="Enter API key"
+                value={this.state.api_key}
+                onChange={this.update_api_key}
+                useVendorStyles={true}
                 />
-            </FormGroup>
         )
     }
 
