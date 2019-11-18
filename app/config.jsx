@@ -37,11 +37,11 @@ export default class Config extends React.Component{
     api_key_textbox() {
         return (
             <FormGroup controlId="api_key_text">
-                <ControlLabel>API Key</ControlLabel>
+                <ControlLabel>Api Key</ControlLabel>
                 <FormControl
                     type="text"
                     value={this.state.api_key}
-                    placeholder="Enter API key"
+                    placeholder="Enter Api key"
                     onChange={this.update_api_key}
                 />
             </FormGroup>
