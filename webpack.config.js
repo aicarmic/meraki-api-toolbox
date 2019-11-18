@@ -35,7 +35,11 @@ var config = {
                     })
                 }
 
+<<<<<<< HEAD
                 fetch('https://dashboard.meraki.com/' + req.originalUrl,fetch_config).then((response) => {
+=======
+                fetch('https://api.meraki.com/' + req.originalUrl,fetch_config).then((response) => {
+>>>>>>> cc041f1aff960c89215fba074683fc9fec15ebd9
                     response.json().then((body) => {
                         res.status(response.status).json(body)
                     })                    
